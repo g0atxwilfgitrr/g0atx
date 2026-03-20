@@ -1,151 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G0atX | Advanced Web Experiences</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>G0atX | Advanced Web Experiences</title>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+  <!-- Fix browser showing old homepage -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            background: #000;
-            color: white;
-            overflow-x: hidden;
-        }
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
 
-        /* HERO SECTION */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(135deg, #000, #111);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding-left: 8%;
-            animation: fadeIn 1.5s ease-in-out;
-        }
+  <style>
+    /* --- ANIMATIONS --- */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
 
-        .hero h1 {
-            font-size: 4rem;
-            font-weight: 800;
-            color: #ff1a1a;
-            animation: slideDown 1.2s ease;
-        }
+    @keyframes slideUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
 
-        .hero p {
-            font-size: 1.3rem;
-            max-width: 500px;
-            margin-top: -10px;
-            animation: fadeIn 2s ease;
-        }
+    @keyframes slideLeft {
+      from { transform: translateX(40px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
 
-        .cta-btn {
-            margin-top: 25px;
-            padding: 14px 30px;
-            background: #ff1a1a;
-            color: white;
-            border: none;
-            font-size: 1.1rem;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: 0.3s;
-            animation: popIn 1.8s ease;
-        }
+    @keyframes slideRight {
+      from { transform: translateX(-40px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
 
-        .cta-btn:hover {
-            background: #cc0000;
-            transform: scale(1.05);
-        }
+    /* Apply animations */
+    .hero-content {
+      animation: slideUp 1.2s ease-out;
+    }
 
-        /* FEATURES SECTION */
-        .features {
-            padding: 80px 8%;
-            background: #0d0d0d;
-        }
+    .hero-content h1 {
+      animation: fadeIn 1.4s ease-out;
+    }
 
-        .features h2 {
-            font-size: 2.5rem;
-            color: #ff1a1a;
-            margin-bottom: 40px;
-            text-align: center;
-        }
+    .hero-content p {
+      animation: fadeIn 1.8s ease-out;
+    }
 
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-        }
+    .hero-actions {
+      animation: fadeIn 2.2s ease-out;
+    }
 
-        .feature-box {
-            background: #111;
-            padding: 30px;
-            border-radius: 10px;
-            border: 1px solid #222;
-            transition: 0.3s;
-        }
+    .hero-highlight {
+      animation: slideLeft 1.4s ease-out;
+    }
 
-        .feature-box:hover {
-            transform: translateY(-10px);
-            border-color: #ff1a1a;
-        }
+    /* Button hover animation */
+    .btn {
+      transition: 0.3s ease;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
 
-        .feature-box h3 {
-            color: #ff1a1a;
-            margin-bottom: 10px;
-        }
-
-        /* ANIMATIONS */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideDown {
-            from { transform: translateY(-40px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        @keyframes popIn {
-            from { transform: scale(0.8); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-    </style>
+    /* Smooth fade-in for whole page */
+    body {
+      animation: fadeIn 0.8s ease-out;
+    }
+  </style>
 </head>
 
 <body>
+  <header class="site-header">
+    <div class="logo">G0atX</div>
+    <nav class="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+      <a href="payments.html">Payments</a>
+      <a href="policies.html">Policies</a>
+    </nav>
+    <button id="themeToggle" class="theme-toggle">☀</button>
+  </header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <h1>Welcome to G0atX</h1>
-        <p>We build powerful, branded web experiences with automation, chatbots, and clean UI that stands out.</p>
-        <button class="cta-btn" onclick="location.href='services.html'">Explore Services</button>
+  <main class="hero">
+    <section class="hero-content">
+      <h1>G0atX: Elite, Branded Web Systems</h1>
+      <p>
+        We design, build, and launch high‑performance, branded websites with smart chatbots,
+        clean navigation, and business‑ready workflows.
+      </p>
+      <div class="hero-actions">
+        <a href="services.html" class="btn primary">View Services</a>
+        <a href="portfolio.html" class="btn secondary">See Work</a>
+      </div>
     </section>
 
-    <!-- FEATURES -->
-    <section class="features">
-        <h2>What We Build</h2>
-
-        <div class="feature-grid">
-            <div class="feature-box">
-                <h3>⚡ Custom Websites</h3>
-                <p>Fully branded, multi‑page websites with clean navigation and modern UI.</p>
-            </div>
-
-            <div class="feature-box">
-                <h3>🤖 Smart Chatbots</h3>
-                <p>Misspelling‑proof, intelligent chatbots integrated across your entire site.</p>
-            </div>
-
-            <div class="feature-box">
-                <h3>🎨 Branding & UI</h3>
-                <p>Logos, color themes, and layouts designed for maximum impact.</p>
-            </div>
-        </div>
+    <section class="hero-highlight">
+      <h2>Why G0atX</h2>
+      <ul>
+        <li>Custom multi‑page sites with red/black branding</li>
+        <li>Chatbots that handle typos and stay on‑brand</li>
+        <li>Contact, booking, and payment‑ready flows</li>
+      </ul>
     </section>
+  </main>
 
+  <footer class="site-footer">
+    <p>© <span id="year"></span> G0atX. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="policies.html#privacy">Privacy</a>
+      <a href="policies.html#terms">Terms</a>
+      <a href="policies.html#refund">Refund Policy</a>
+    </div>
+  </footer>
+
+  <!-- Chatbot -->
+  <button id="chatbotToggle" class="chatbot-toggle">Chat</button>
+  <div id="chatbot" class="chatbot">
+    <div class="chatbot-header">
+      <span>G0atX Assistant</span>
+      <button id="chatbotClose" class="chatbot-close">×</button>
+    </div>
+    <div id="chatbotMessages" class="chatbot-messages">
+      <div class="chatbot-message bot">
+        Hi! I’m the G0atX assistant. Ask me about our services, pricing, or process.
+      </div>
+    </div>
+    <form id="chatbotForm" class="chatbot-form">
+      <input
+        type="text"
+        id="chatbotInput"
+        placeholder="Ask about G0atX (services, pricing, process)..."
+        autocomplete="off"
+      />
+      <button type="submit">Send</button>
+    </form>
+  </div>
 </body>
 </html>
+
