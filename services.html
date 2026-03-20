@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | G0atX</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">G0atX</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+      <a href="payments.html">Payments</a>
+      <a href="policies.html">Policies</a>
+    </nav>
+    <button id="themeToggle" class="theme-toggle">☀</button>
+  </header>
+
+  <main class="page">
+    <h1>Services</h1>
+    <section class="grid three">
+      <article class="card">
+        <h2>Branded Website Build</h2>
+        <p>Multi‑page, responsive site with red/black theme, navigation, and content structure.</p>
+        <p class="price">From $1,200</p>
+      </article>
+      <article class="card">
+        <h2>Advanced Chatbot</h2>
+        <p>Custom chatbot tuned to your services, FAQs, and brand voice, typo‑tolerant.</p>
+        <p class="price">From $600</p>
+      </article>
+      <article class="card">
+        <h2>Full System Setup</h2>
+        <p>Website, chatbot, contact flows, policies, and payment‑ready pages in one build.</p>
+        <p class="price">From $2,000</p>
+      </article>
+    </section>
+
+    <div class="cta-banner">
+      <p>Ready to start a project?</p>
+      <a href="contact.html" class="btn primary">Contact G0atX</a>
+      <a href="payments.html" class="btn secondary">Secure a Slot</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> G0atX. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="policies.html#privacy">Privacy</a>
+      <a href="policies.html#terms">Terms</a>
+      <a href="policies.html#refund">Refund Policy</a>
+    </div>
+  </footer>
+
+  <!-- Chatbot (same structure as other pages) -->
+  <button id="chatbotToggle" class="chatbot-toggle">Chat</button>
+  <div id="chatbot" class="chatbot">
+    <div class="chatbot-header">
+      <span>G0atX Assistant</span>
+      <button id="chatbotClose" class="chatbot-close">×</button>
+    </div>
+    <div id="chatbotMessages" class="chatbot-messages">
+      <div class="chatbot-message bot">
+        Ask me about packages, pricing, or which service fits you best.
+      </div>
+    </div>
+    <form id="chatbotForm" class="chatbot-form">
+      <input
+        type="text"
+        id="chatbotInput"
+        placeholder="Ask about services..."
+        autocomplete="off"
+      />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</body>
+</html>
