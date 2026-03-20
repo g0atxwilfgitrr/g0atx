@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | G0atX</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">G0atX</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+      <a href="payments.html">Payments</a>
+      <a href="policies.html">Policies</a>
+    </nav>
+    <button id="themeToggle" class="theme-toggle">☀</button>
+  </header>
+
+  <main class="page">
+    <h1>About G0atX</h1>
+    <p>
+      G0atX is built for founders and teams who want more than a template.
+      We combine branding, UX, and engineering into one clean system.
+    </p>
+    <section class="grid two">
+      <div>
+        <h2>Our Approach</h2>
+        <p>
+          We start with your brand, then design navigation, flows, and chatbot logic
+          that match how your clients actually think and search.
+        </p>
+      </div>
+      <div>
+        <h2>What Makes Us Different</h2>
+        <ul>
+          <li>Iterative, collaborative build process</li>
+          <li>Misspelling‑tolerant chatbot logic</li>
+          <li>Business‑ready pages: portfolio, testimonials, policies, payments</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> G0atX. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="policies.html#privacy">Privacy</a>
+      <a href="policies.html#terms">Terms</a>
+      <a href="policies.html#refund">Refund Policy</a>
+    </div>
+  </footer>
+
+  <!-- Chatbot -->
+  <button id="chatbotToggle" class="chatbot-toggle">Chat</button>
+  <div id="chatbot" class="chatbot">
+    <div class="chatbot-header">
+      <span>G0atX Assistant</span>
+      <button id="chatbotClose" class="chatbot-close">×</button>
+    </div>
+    <div id="chatbotMessages" class="chatbot-messages">
+      <div class="chatbot-message bot">
+        Hi! Ask me anything about G0atX, our process, or how we work.
+      </div>
+    </div>
+    <form id="chatbotForm" class="chatbot-form">
+      <input
+        type="text"
+        id="chatbotInput"
+        placeholder="Ask about G0atX..."
+        autocomplete="off"
+      />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</body>
+</html>
