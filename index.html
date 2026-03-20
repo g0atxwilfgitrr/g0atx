@@ -5,7 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>G0atX | Advanced Web Experiences</title>
 
-  <!-- Cache control so you actually see the latest version -->
+  <!-- Your uploaded logo as favicon -->
+  <link rel="icon" type="image/jpeg" href="80262025-e031-45e7-84c4-2590075ca9f0.jpg">
+
+  <!-- SEO description -->
+  <meta name="description" content="G0atX builds elite branded websites with automation, chatbots, and clean red/black UI. High‑performance, multi‑page business sites built professionally.">
+
+  <!-- Cache fix -->
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
@@ -14,60 +20,30 @@
   <script defer src="script.js"></script>
 
   <style>
-    /* Make sure header is always on top and clickable */
+    /* Make sure header is always clickable */
     .site-header {
       position: relative;
       z-index: 1000;
     }
 
-    /* --- NEW ANIMATIONS (different vibe) --- */
-
+    /* --- NEW ANIMATIONS --- */
     @keyframes heroEnter {
-      from {
-        transform: translateY(15px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
+      from { transform: translateY(15px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
 
     @keyframes heroCardEnter {
-      from {
-        transform: translateX(20px);
-        opacity: 0;
-      }
-      to {
-        transform: translateX(0);
-        opacity: 1;
-      }
+      from { transform: translateX(20px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
     }
 
     @keyframes buttonGlow {
-      0% {
-        box-shadow: 0 0 0px rgba(255, 0, 0, 0.0);
-      }
-      50% {
-        box-shadow: 0 0 16px rgba(255, 0, 0, 0.6);
-      }
-      100% {
-        box-shadow: 0 0 0px rgba(255, 0, 0, 0.0);
-      }
+      0% { box-shadow: 0 0 0px rgba(255, 0, 0, 0.0); }
+      50% { box-shadow: 0 0 16px rgba(255, 0, 0, 0.6); }
+      100% { box-shadow: 0 0 0px rgba(255, 0, 0, 0.0); }
     }
 
-    @keyframes underlineSlide {
-      from {
-        width: 0;
-        opacity: 0;
-      }
-      to {
-        width: 100%;
-        opacity: 1;
-      }
-    }
-
-    /* Apply animations to hero sections */
+    /* Apply animations */
     .hero-content {
       opacity: 0;
       animation: heroEnter 0.8s ease-out forwards;
@@ -80,12 +56,12 @@
       animation-delay: 0.25s;
     }
 
-    /* Buttons: subtle glow pulse */
+    /* Button glow */
     .hero-actions .btn.primary {
       animation: buttonGlow 2.2s ease-in-out infinite;
     }
 
-    /* Nav hover underline animation (visual but simple) */
+    /* Nav underline animation */
     .nav a {
       position: relative;
       overflow: hidden;
@@ -110,9 +86,11 @@
     }
   </style>
 </head>
+
 <body>
   <header class="site-header">
     <div class="logo">G0atX</div>
+
     <nav class="nav">
       <a href="index.html" class="active">Home</a>
       <a href="about.html">About</a>
@@ -122,6 +100,7 @@
       <a href="payments.html">Payments</a>
       <a href="policies.html">Policies</a>
     </nav>
+
     <button id="themeToggle" class="theme-toggle">☀</button>
   </header>
 
@@ -181,5 +160,6 @@
   </div>
 </body>
 </html>
+
 
 
