@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | G0atX</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="logo">G0atX</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="payments.html">Payments</a>
+      <a href="policies.html">Policies</a>
+    </nav>
+    <button id="themeToggle" class="theme-toggle">☀</button>
+  </header>
+
+  <main class="page">
+    <h1>Contact G0atX</h1>
+    <p>Tell us about your project and we’ll respond with a clear next step.</p>
+
+    <section class="grid two">
+
+      <!-- ⭐ FIXED + UPGRADED CONTACT FORM -->
+      <form 
+        class="contact-form"
+        action="https://formsubmit.co/g0atxwebsite@gmail.com"
+        method="POST"
+      >
+
+        <!-- FormSubmit settings -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_subject" value="New Contact Form Submission from G0atX">
+
+        <!-- ⭐ Thank‑You Redirect -->
+        <input type="hidden" name="_next" value="thankyou.html">
+
+        <!-- ⭐ Anti‑Spam Honeypot -->
+        <input type="text" name="_honey" style="display:none">
+
+        <label>
+          Name
+          <input type="text" name="name" required />
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+
+        <label>
+          Budget range
+          <select name="budget" required>
+            <option value="">Select</option>
+            <option>Under $1,000</option>
+            <option>$1,000–$2,500</option>
+            <option>$2,500+</option>
+          </select>
+        </label>
+
+        <label>
+          Project details
+          <textarea name="details" rows="5" required></textarea>
+        </label>
+
+        <button type="submit" class="btn primary">Submit</button>
+      </form>
+
+      <div>
+        <h2>Secure Your Spot</h2>
+        <p>
+          If you already know you want to work with G0atX, you can go straight to the
+          payments page and reserve a build slot.
+        </p>
+        <a href="payments.html" class="btn secondary">Go to Payments</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> G0atX. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="policies.html#privacy">Privacy</a>
+      <a href="policies.html#terms">Terms</a>
+      <a href="policies.html#refund">Refund Policy</a>
+    </div>
+  </footer>
+
+  <!-- Chatbot -->
+  <button id="chatbotToggle" class="chatbot-toggle">Chat</button>
+  <div id="chatbot" class="chatbot">
+    <div class="chatbot-header">
+      <span>G0atX Assistant</span>
+      <button id="chatbotClose" class="chatbot-close">×</button>
+    </div>
+    <div id="chatbotMessages" class="chatbot-messages">
+      <div class="chatbot-message bot">
+        Need help deciding a package or timeline? Ask me here.
+      </div>
+    </div>
+    <form id="chatbotForm" class="chatbot-form">
+      <input
+        type="text"
+        id="chatbotInput"
+        placeholder="Ask about starting a project..."
+        autocomplete="off"
+      />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</body>
+</html>
