@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | G0atX</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">G0atX</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html" class="active">Portfolio</a>
+      <a href="contact.html">Contact</a>
+      <a href="payments.html">Payments</a>
+      <a href="policies.html">Policies</a>
+    </nav>
+    <button id="themeToggle" class="theme-toggle">☀</button>
+  </header>
+
+  <main class="page">
+    <h1>Portfolio</h1>
+    <p>Sample projects that show how we blend branding, UX, and structure.</p>
+
+    <section class="grid three">
+      <article class="card">
+        <h2>Consulting Studio</h2>
+        <p>Multi‑page site with services, case studies, and a lead‑capture chatbot.</p>
+      </article>
+      <article class="card">
+        <h2>Creative Agency</h2>
+        <p>Bold red/black branding, portfolio grid, and testimonial‑driven homepage.</p>
+      </article>
+      <article class="card">
+        <h2>Local Business Hub</h2>
+        <p>Simple navigation, booking form, and FAQ chatbot for quick answers.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> G0atX. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="policies.html#privacy">Privacy</a>
+      <a href="policies.html#terms">Terms</a>
+      <a href="policies.html#refund">Refund Policy</a>
+    </div>
+  </footer>
+
+  <!-- Chatbot -->
+  <button id="chatbotToggle" class="chatbot-toggle">Chat</button>
+  <div id="chatbot" class="chatbot">
+    <div class="chatbot-header">
+      <span>G0atX Assistant</span>
+      <button id="chatbotClose" class="chatbot-close">×</button>
+    </div>
+    <div id="chatbotMessages" class="chatbot-messages">
+      <div class="chatbot-message bot">
+        Want a site like one of these? Ask what stack or structure we’d use.
+      </div>
+    </div>
+    <form id="chatbotForm" class="chatbot-form">
+      <input
+        type="text"
+        id="chatbotInput"
+        placeholder="Ask about portfolio..."
+        autocomplete="off"
+      />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</body>
+</html>
