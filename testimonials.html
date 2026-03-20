@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G0atX Testimonials</title>
+
+    <style>
+        :root {
+            --bg: #0d0d0d;
+            --text: #ffffff;
+            --card: #1a1a1a;
+            --accent: #8b0000;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+        }
+
+        header {
+            background: linear-gradient(to right, var(--accent), #000);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 { margin: 0; }
+
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .right-controls {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        #darkToggle {
+            background: #000;
+            color: #fff;
+            border: 1px solid #444;
+            padding: 6px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .section {
+            padding: 40px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .testimonial {
+            background: var(--card);
+            border-radius: 10px;
+            border: 2px solid var(--accent);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial h3 {
+            margin-top: 0;
+        }
+
+        footer {
+            background: #111;
+            padding: 20px;
+            text-align: center;
+            color: #ccc;
+        }
+
+        /* Chatbot */
+        #chatbot-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--accent);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 0 10px var(--accent);
+            z-index: 9999;
+        }
+
+        #chatbot-box {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 300px;
+            background: var(--card);
+            border: 2px solid var(--accent);
+            border-radius: 10px;
+            display: none;
+            padding: 15px;
+            z-index: 9999;
+        }
+
+        #chatbot-messages {
+            height: 200px;
+            overflow-y: auto;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        #chatbot-input {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>G0atX</h1>
+    <div class="right-controls">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="testimonials.html">Testimonials</a>
+        </nav>
+        <button id="darkToggle" onclick="toggleDarkMode()">Dark</button>
+    </div>
+</header>
+
+<div class="section">
+    <h2>Testimonials</h2>
+    <p>Here’s what clients could say about working with G0atX. You can replace these with real reviews later.</p>
+
+    <div class="testimonial">
+        <h3>“Super easy process.”</h3>
+        <p>“G0atX made our website in just a few days. It looks clean and our customers love it.”</p>
+        <p><strong>— Local Bakery Owner</strong></p>
+    </div>
+
+    <div class="testimonial">
+        <h3>“Professional and fast.”</h3>
+        <p>“They explained everything clearly and handled all the tech stuff. I just sent content and they did the rest.”</p>
+        <p><strong>— Fitness Trainer</strong></p>
+    </div>
+
+    <div class="testimonial">
+        <h3>“Great value for the price.”</h3>
+        <p>“The site looks way more expensive than what we paid. Highly recommend G0atX.”</p>
+        <p><strong>— Small Business Owner</strong></p>
+    </div>
+</div>
+
+<footer>
+    © 2026 G0atX Web Design — All Rights Reserved
+</footer>
+
+<div id="chatbot-btn" onclick="toggleChatbot()">Chat with G0atX</div>
+<div id="chatbot-box">
+    <div id="chatbot-messages"></div>
+    <input id="chatbot-input" placeholder="Ask us anything..." onkeydown="if(event.key==='Enter') sendMessage()">
+</div>
+
+<script>
+    let darkOn = true;
+    function toggleDarkMode() {
+        darkOn = !darkOn;
+        document.body.style.backgroundColor = darkOn ? "#0d0d0d" : "#f5f5f5";
+        document.body.style.color = darkOn ? "#ffffff" : "#111111";
+        document.getElementById("darkToggle").innerText = darkOn ? "Dark" : "Light";
+    }
+
+    function toggleChatbot() {
+        const box = document.getElementById("chatbot-box");
+        box.style.display = box.style.display === "block" ? "none" : "block";
+    }
+
+    function clean(text) {
+        return text.toLowerCase().replace(/[^a-z0-9 ]/g, "").trim();
+    }
+
+    function similar(input, words) {
+        input = clean(input);
+        return words.some(word => input.includes(word));
+    }
+
+    function sendMessage() {
+        const input = document.getElementById("chatbot-input");
+        const messages = document.getElementById("chatbot-messages");
+
+        let userMsg = input.value.trim();
+        if (userMsg === "") return;
+
+        messages.innerHTML += `<p><strong>You:</strong> ${userMsg}</p>`;
+        input.value = "";
+
+        let msg = clean(userMsg);
+        let botReply = "Thanks for messaging G0atX! How can we help with your website today?";
+
+        if (similar(msg, ["price", "cost", "pric", "prise", "prce"])) {
+            botReply = "Our websites start at $99. Full pricing is on the Services page.";
+        } else if (similar(msg, ["contact", "email", "phone", "number", "call"])) {
+            botReply = "You can contact us at g0atx@gmail.com or call 262‑879‑4237.";
+        } else if (similar(msg, ["service", "what do", "offer", "do u", "do you"])) {
+            botReply = "We build modern websites for small businesses. Check the Services page for details.";
+        } else if (similar(msg, ["time", "long", "how long", "days", "fast"])) {
+            botReply = "Most websites are completed within 3–7 days depending on features.";
+        } else if (similar(msg, ["hi", "hello", "hey", "helo", "hii"])) {
+            botReply = "Hello! How can G0atX help you today?";
+        }
+
+        messages.innerHTML += `<p><strong>G0atX Bot:</strong> ${botReply}</p>`;
+        messages.scrollTop = messages.scrollHeight;
+    }
+</script>
+
+</body>
+</html>
