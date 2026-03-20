@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payments | G0atX</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="logo">G0atX</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+      <a href="payments.html" class="active">Payments</a>
+      <a href="policies.html">Policies</a>
+    </nav>
+    <button id="themeToggle" class="theme-toggle">☀</button>
+  </header>
+
+  <main class="page">
+    <h1>Payments</h1>
+    <p>
+      Online payments (Apple Pay, Google Pay, Cards, etc.) are coming soon.
+      For now, you can submit a payment request and we’ll follow up by email.
+    </p>
+
+    <section class="grid two">
+      <!-- PAYMENT FORM -->
+      <form class="payment-form" action="https://formsubmit.co/g0atxwebsite@gmail.com" method="POST">
+
+        <!-- FormSubmit settings -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_subject" value="New Payment Request from G0atX">
+
+        <label>
+          Your Name
+          <input type="text" name="name" required />
+        </label>
+
+        <label>
+          Your Email
+          <input type="email" name="email" required />
+        </label>
+
+        <label>
+          What service are you paying for?
+          <input type="text" name="service" required />
+        </label>
+
+        <label>
+          Amount (USD)
+          <input type="number" name="amount" min="1" step="0.01" required />
+        </label>
+
+        <label>
+          Preferred payment methods
+          <select name="preferred_methods" multiple>
+            <option value="card">Credit / Debit Card</option>
+            <option value="apple_pay">Apple Pay</option>
+            <option value="google_pay">Google Pay</option>
+            <option value="bank_transfer">Bank Transfer</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+
+        <label>
+          Additional Notes (optional)
+          <textarea name="notes" rows="4"></textarea>
+        </label>
+
+        <button type="submit" class="btn primary">Submit Payment Request</button>
+      </form>
+
+      <div>
+        <h2>Payments Coming Soon</h2>
+        <p>
+          We’re setting up secure Stripe payments so you can pay instantly using
+          Apple Pay, Google Pay, cards, and more.
+        </p>
+        <p class="payment-note">
+          Until then, use the form to request a payment link.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> G0atX. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="policies.html#privacy">Privacy</a>
+      <a href="policies.html#terms">Terms</a>
+      <a href="policies.html#refund">Refund Policy</a>
+    </div>
+  </footer>
+
+  <!-- Chatbot -->
+  <button id="chatbotToggle" class="chatbot-toggle">Chat</button>
+  <div id="chatbot" class="chatbot">
+    <div class="chatbot-header">
+      <span>G0atX Assistant</span>
+      <button id="chatbotClose" class="chatbot-close">×</button>
+    </div>
+    <div id="chatbotMessages" class="chatbot-messages">
+      <div class="chatbot-message bot">
+        Need help with payments or project details? Ask me here.
+      </div>
+    </div>
+    <form id="chatbotForm" class="chatbot-form">
+      <input
+        type="text"
+        id="chatbotInput"
+        placeholder="Ask about payments or services..."
+        autocomplete="off"
+      />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</body>
+</html>
