@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>G0atX | Advanced Web Experiences</title>
 
-  <!-- Fix browser showing old homepage -->
+  <!-- Cache control so you actually see the latest version -->
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
@@ -14,64 +14,102 @@
   <script defer src="script.js"></script>
 
   <style>
-    /* --- ANIMATIONS --- */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    /* Make sure header is always on top and clickable */
+    .site-header {
+      position: relative;
+      z-index: 1000;
     }
 
-    @keyframes slideUp {
-      from { transform: translateY(40px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
+    /* --- NEW ANIMATIONS (different vibe) --- */
+
+    @keyframes heroEnter {
+      from {
+        transform: translateY(15px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
 
-    @keyframes slideLeft {
-      from { transform: translateX(40px); opacity: 0; }
-      to { transform: translateX(0); opacity: 1; }
+    @keyframes heroCardEnter {
+      from {
+        transform: translateX(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
 
-    @keyframes slideRight {
-      from { transform: translateX(-40px); opacity: 0; }
-      to { transform: translateX(0); opacity: 1; }
+    @keyframes buttonGlow {
+      0% {
+        box-shadow: 0 0 0px rgba(255, 0, 0, 0.0);
+      }
+      50% {
+        box-shadow: 0 0 16px rgba(255, 0, 0, 0.6);
+      }
+      100% {
+        box-shadow: 0 0 0px rgba(255, 0, 0, 0.0);
+      }
     }
 
-    /* Apply animations */
+    @keyframes underlineSlide {
+      from {
+        width: 0;
+        opacity: 0;
+      }
+      to {
+        width: 100%;
+        opacity: 1;
+      }
+    }
+
+    /* Apply animations to hero sections */
     .hero-content {
-      animation: slideUp 1.2s ease-out;
-    }
-
-    .hero-content h1 {
-      animation: fadeIn 1.4s ease-out;
-    }
-
-    .hero-content p {
-      animation: fadeIn 1.8s ease-out;
-    }
-
-    .hero-actions {
-      animation: fadeIn 2.2s ease-out;
+      opacity: 0;
+      animation: heroEnter 0.8s ease-out forwards;
+      animation-delay: 0.1s;
     }
 
     .hero-highlight {
-      animation: slideLeft 1.4s ease-out;
+      opacity: 0;
+      animation: heroCardEnter 0.9s ease-out forwards;
+      animation-delay: 0.25s;
     }
 
-    /* Button hover animation */
-    .btn {
-      transition: 0.3s ease;
-    }
-    .btn:hover {
-      transform: scale(1.05);
-      opacity: 0.9;
+    /* Buttons: subtle glow pulse */
+    .hero-actions .btn.primary {
+      animation: buttonGlow 2.2s ease-in-out infinite;
     }
 
-    /* Smooth fade-in for whole page */
-    body {
-      animation: fadeIn 0.8s ease-out;
+    /* Nav hover underline animation (visual but simple) */
+    .nav a {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      height: 2px;
+      background: #ff1a1a;
+      width: 0;
+      opacity: 0;
+      transition: width 0.25s ease-out, opacity 0.25s ease-out;
+    }
+
+    .nav a:hover::after,
+    .nav a.active::after {
+      width: 100%;
+      opacity: 1;
     }
   </style>
 </head>
-
 <body>
   <header class="site-header">
     <div class="logo">G0atX</div>
@@ -143,4 +181,5 @@
   </div>
 </body>
 </html>
+
 
