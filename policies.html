@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Policies | G0atX</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">G0atX</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+      <a href="payments.html">Payments</a>
+      <a href="policies.html" class="active">Policies</a>
+    </nav>
+    <button id="themeToggle" class="theme-toggle">☀</button>
+  </header>
+
+  <main class="page policies">
+    <h1>Policies</h1>
+
+    <section id="privacy">
+      <h2>Privacy Policy</h2>
+      <p>
+        G0atX collects only the information you provide through forms or direct contact.
+        We use this information to respond to your inquiries, prepare proposals, and
+        deliver services. We do not sell your data to third parties.
+      </p>
+      <p>
+        Basic analytics may be used to understand site usage in aggregate. If you wish
+        to have your information removed, contact us via the contact page.
+      </p>
+    </section>
+
+    <section id="terms">
+      <h2>Terms of Service</h2>
+      <p>
+        By engaging G0atX, you agree to provide accurate project information and to
+        respond in a timely manner during the build. Project timelines depend on
+        responsiveness and scope.
+      </p>
+      <p>
+        Intellectual property for final deliverables is transferred upon full payment,
+        unless otherwise agreed in writing. G0atX may showcase non‑confidential work
+        in the portfolio.
+      </p>
+    </section>
+
+    <section id="refund">
+      <h2>Refund Policy</h2>
+      <p>
+        Deposits are generally non‑refundable once work has begun, as they reserve
+        time and resources. In exceptional cases, partial refunds may be considered
+        based on work completed.
+      </p>
+      <p>
+        If G0atX cannot deliver the agreed scope for reasons on our side, we will
+        work with you to provide a fair resolution, which may include a partial refund
+        or additional work.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> G0atX. All rights reserved.</p>
+  </footer>
+
+  <!-- Chatbot -->
+  <button id="chatbotToggle" class="chatbot-toggle">Chat</button>
+  <div id="chatbot" class="chatbot">
+    <div class="chatbot-header">
+      <span>G0atX Assistant</span>
+      <button id="chatbotClose" class="chatbot-close">×</button>
+    </div>
+    <div id="chatbotMessages" class="chatbot-messages">
+      <div class="chatbot-message bot">
+        Questions about our policies? Ask here and I’ll summarize in simple language.
+      </div>
+    </div>
+    <form id="chatbotForm" class="chatbot-form">
+      <input
+        type="text"
+        id="chatbotInput"
+        placeholder="Ask about policies..."
+        autocomplete="off"
+      />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</body>
+</html>
