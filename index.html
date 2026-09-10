@@ -1,165 +1,173 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>G0atX | Advanced Web Experiences</title>
-
-  <!-- Your uploaded logo as favicon -->
-  <link rel="icon" type="image/jpeg" href="80262025-e031-45e7-84c4-2590075ca9f0.jpg">
-
-  <!-- SEO description -->
-  <meta name="description" content="G0atX builds elite branded websites with automation, chatbots, and clean red/black UI. High‑performance, multi‑page business sites built professionally.">
-
-  <!-- Cache fix -->
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
-
-  <link rel="stylesheet" href="styles.css" />
-  <script defer src="script.js"></script>
-
-  <style>
-    /* Make sure header is always clickable */
-    .site-header {
-      position: relative;
-      z-index: 1000;
-    }
-
-    /* --- NEW ANIMATIONS --- */
-    @keyframes heroEnter {
-      from { transform: translateY(15px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    @keyframes heroCardEnter {
-      from { transform: translateX(20px); opacity: 0; }
-      to { transform: translateX(0); opacity: 1; }
-    }
-
-    @keyframes buttonGlow {
-      0% { box-shadow: 0 0 0px rgba(255, 0, 0, 0.0); }
-      50% { box-shadow: 0 0 16px rgba(255, 0, 0, 0.6); }
-      100% { box-shadow: 0 0 0px rgba(255, 0, 0, 0.0); }
-    }
-
-    /* Apply animations */
-    .hero-content {
-      opacity: 0;
-      animation: heroEnter 0.8s ease-out forwards;
-      animation-delay: 0.1s;
-    }
-
-    .hero-highlight {
-      opacity: 0;
-      animation: heroCardEnter 0.9s ease-out forwards;
-      animation-delay: 0.25s;
-    }
-
-    /* Button glow */
-    .hero-actions .btn.primary {
-      animation: buttonGlow 2.2s ease-in-out infinite;
-    }
-
-    /* Nav underline animation */
-    .nav a {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .nav a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -3px;
-      height: 2px;
-      background: #ff1a1a;
-      width: 0;
-      opacity: 0;
-      transition: width 0.25s ease-out, opacity 0.25s ease-out;
-    }
-
-    .nav a:hover::after,
-    .nav a.active::after {
-      width: 100%;
-      opacity: 1;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>G0atX — Elite, Branded Web Systems</title>
+<meta name="description" content="G0atX designs and builds high-performance branded websites with typo-tolerant chatbots, clean navigation, and business-ready workflows." />
+<link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
-  <header class="site-header">
-    <div class="logo">G0atX</div>
 
-    <nav class="nav">
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="contact.html">Contact</a>
-      <a href="payments.html">Payments</a>
-      <a href="policies.html">Policies</a>
-    </nav>
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="logo">G0at<span class="accent">X</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="payments.html">Payments</a></li>
+      <li><a href="policies.html">Policies</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" aria-label="Toggle light and dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
 
-    <button id="themeToggle" class="theme-toggle">☀</button>
-  </header>
-
-  <main class="hero">
-    <section class="hero-content">
-      <h1>G0atX: Elite, Branded Web Systems</h1>
-      <p>
-        We design, build, and launch high‑performance, branded websites with smart chatbots,
-        clean navigation, and business‑ready workflows.
-      </p>
-      <div class="hero-actions">
-        <a href="services.html" class="btn primary">View Services</a>
-        <a href="portfolio.html" class="btn secondary">See Work</a>
+<main>
+  <section class="hero">
+    <div class="hero-shape" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <div>
+        <span class="eyebrow-badge">Branded web systems, built to close</span>
+        <h1>Websites that look like you're already winning.</h1>
+        <p class="lead">G0atX designs, builds, and launches high-performance branded websites with smart chatbots, clean navigation, and business-ready workflows — so your site does the convincing before you ever pick up the phone.</p>
+        <div class="hero-ctas">
+          <a href="contact.html" class="btn btn-primary">Start a project</a>
+          <a href="services.html" class="btn btn-outline">See services &amp; pricing</a>
+        </div>
       </div>
-    </section>
+      <div class="hero-card">
+        <div class="stat">3</div>
+        <div class="stat-label">Core builds — pick one or bundle all three</div>
+        <ul>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Multi-page, responsive sites in a red/black brand system</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Chatbots tuned to your business that understand typos</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Contact flows, policies, and payment-ready pages included</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    <section class="hero-highlight">
-      <h2>Why G0atX</h2>
-      <ul>
-        <li>Custom multi‑page sites with red/black branding</li>
-        <li>Chatbots that handle typos and stay on‑brand</li>
-        <li>Contact, booking, and payment‑ready flows</li>
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="divider"></div>
+        <h2>What we build</h2>
+        <p>Three ways to work with G0atX, from a single branded site to a full system with a chatbot doing the talking for you.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card featured">
+          <div>
+            <h3>Full System Setup</h3>
+            <p>Website, chatbot, contact flows, policies, and payment-ready pages — one build, fully wired together.</p>
+            <a href="services.html" class="btn btn-outline">View details</a>
+          </div>
+          <div class="service-price">$500 <small>one-time build</small></div>
+        </div>
+        <div class="service-card">
+          <h3>Branded Website Build</h3>
+          <p>Multi-page, responsive site with a red/black theme, navigation, and content structure built around your business.</p>
+          <div class="service-price">$300 <small>one-time build</small></div>
+          <a href="services.html" class="btn btn-outline">Learn more</a>
+        </div>
+        <div class="service-card">
+          <h3>Advanced Chatbot</h3>
+          <p>Custom chatbot tuned to your services, FAQs, and brand voice — typo-tolerant, so it understands visitors either way.</p>
+          <div class="service-price">$80 <small>one-time build</small></div>
+          <a href="services.html" class="btn btn-outline">Learn more</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container two-col">
+      <div>
+        <div class="divider"></div>
+        <h2>Built for founders who want more than a template</h2>
+        <p>We combine branding, UX, and engineering into one clean system. Every build starts with your brand, then works outward into navigation, flows, and chatbot logic that match how your clients actually think and search.</p>
+        <a href="about.html" class="btn btn-outline">More about our approach</a>
+      </div>
+      <ul class="checklist">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Iterative, collaborative build process — you see it before it ships</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Misspelling-tolerant chatbot logic, tuned to your FAQs</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Business-ready pages: portfolio, contact, policies, payments</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Payment handled in person, after you've reviewed everything</span>
+        </li>
       </ul>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>© <span id="year"></span> G0atX. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="policies.html#privacy">Privacy</a>
-      <a href="policies.html#terms">Terms</a>
-      <a href="policies.html#refund">Refund Policy</a>
     </div>
-  </footer>
+  </section>
 
-  <!-- Chatbot -->
-  <button id="chatbotToggle" class="chatbot-toggle">Chat</button>
-  <div id="chatbot" class="chatbot">
-    <div class="chatbot-header">
-      <span>G0atX Assistant</span>
-      <button id="chatbotClose" class="chatbot-close">×</button>
-    </div>
-    <div id="chatbotMessages" class="chatbot-messages">
-      <div class="chatbot-message bot">
-        Hi! I’m the G0atX assistant. Ask me about our services, pricing, or process.
+  <section class="cta-band">
+    <div class="container" style="display:flex; flex-wrap:wrap; gap:24px; align-items:center; justify-content:space-between;">
+      <div>
+        <h2>Ready to start a project?</h2>
+        <p>Tell us about your business and we'll respond with a clear next step.</p>
+      </div>
+      <div class="hero-ctas" style="margin-top:0;">
+        <a href="contact.html" class="btn btn-primary">Contact G0atX</a>
+        <a href="payments.html" class="btn btn-outline">How payment works</a>
       </div>
     </div>
-    <form id="chatbotForm" class="chatbot-form">
-      <input
-        type="text"
-        id="chatbotInput"
-        placeholder="Ask about G0atX (services, pricing, process)..."
-        autocomplete="off"
-      />
-      <button type="submit">Send</button>
-    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <a href="index.html" class="logo">G0at<span class="accent">X</span></a>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="payments.html">Payments</a></li>
+        <li><a href="policies.html">Policies</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 G0atX. All rights reserved.</span>
+      <span>
+        <a href="policies.html#privacy">Privacy</a> ·
+        <a href="policies.html#terms">Terms</a> ·
+        <a href="policies.html#refund">Refund Policy</a>
+      </span>
+    </div>
   </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/chatbot.js"></script>
 </body>
 </html>
-
-
-
