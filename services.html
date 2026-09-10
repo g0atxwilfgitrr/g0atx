@@ -1,84 +1,139 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services | G0atX</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script defer src="script.js"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Services &amp; Pricing — G0atX</title>
+<meta name="description" content="Branded Website Build, Advanced Chatbot, and Full System Setup — pricing and details." />
+<link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="logo">G0atX</div>
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html" class="active">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="contact.html">Contact</a>
-      <a href="payments.html">Payments</a>
-      <a href="policies.html">Policies</a>
-    </nav>
-    <button id="themeToggle" class="theme-toggle">☀</button>
-  </header>
 
-  <main class="page">
-    <h1>Services</h1>
-    <section class="grid three">
-      <article class="card">
-        <h2>Branded Website Build</h2>
-        <p>Multi‑page, responsive site with red/black theme, navigation, and content structure.</p>
-        <p class="price">From $100</p>
-      </article>
-      <article class="card">
-        <h2>Advanced Chatbot</h2>
-        <p>Custom chatbot tuned to your services, FAQs, and brand voice, typo‑tolerant.</p>
-        <p class="price">From $40</p>
-      </article>
-      <article class="card">
-        <h2>Full System Setup</h2>
-        <p>Website, chatbot, contact flows, policies, and payment‑ready pages in one build.</p>
-        <p class="price">From $300</p>
-      </article>
-    </section>
-
-    <div class="cta-banner">
-      <p>Ready to start a project?</p>
-      <a href="contact.html" class="btn primary">Contact G0atX</a>
-      <a href="payments.html" class="btn secondary">Secure a Slot</a>
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="logo">G0at<span class="accent">X</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html" aria-current="page">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="payments.html">Payments</a></li>
+      <li><a href="policies.html">Policies</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" aria-label="Toggle light and dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
     </div>
-  </main>
+  </nav>
+</header>
 
-  <footer class="site-footer">
-    <p>© <span id="year"></span> G0atX. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="policies.html#privacy">Privacy</a>
-      <a href="policies.html#terms">Terms</a>
-      <a href="policies.html#refund">Refund Policy</a>
+<main>
+  <section class="hero" style="padding-bottom:56px;">
+    <div class="hero-shape" aria-hidden="true"></div>
+    <div class="container" style="position:relative; z-index:1; max-width:760px;">
+      <span class="eyebrow-badge">Services &amp; pricing</span>
+      <h1>Three builds. One brand system.</h1>
+      <p class="lead">Pick a single piece or bundle everything into one build. Every option is designed to work together — same brand, same voice, same navigation logic.</p>
     </div>
-  </footer>
+  </section>
 
-  <!-- Chatbot (same structure as other pages) -->
-  <button id="chatbotToggle" class="chatbot-toggle">Chat</button>
-  <div id="chatbot" class="chatbot">
-    <div class="chatbot-header">
-      <span>G0atX Assistant</span>
-      <button id="chatbotClose" class="chatbot-close">×</button>
-    </div>
-    <div id="chatbotMessages" class="chatbot-messages">
-      <div class="chatbot-message bot">
-        Ask me about packages, pricing, or which service fits you best.
+  <section class="section">
+    <div class="container">
+      <div class="services-grid">
+
+        <div class="service-card">
+          <h3>Branded Website Build</h3>
+          <p>A multi-page, responsive site with a red/black theme, clean navigation, and a content structure built specifically around your business — not a generic template.</p>
+          <ul class="checklist">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Home, About, Services, Portfolio, Contact pages</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Mobile-friendly, fast-loading layout</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Light and dark mode built in</span></li>
+          </ul>
+          <div class="service-price">$300 <small>one-time build</small></div>
+          <a href="contact.html" class="btn btn-outline">Start this build</a>
+        </div>
+
+        <div class="service-card">
+          <h3>Advanced Chatbot</h3>
+          <p>A custom chatbot tuned to your services, FAQs, and brand voice. It understands visitor questions even with typos or misspellings, and answers from a knowledge base built around your business.</p>
+          <ul class="checklist">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Typo-tolerant question matching</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Answers built from your pricing, FAQs, and policies</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Drops into any page of your site</span></li>
+          </ul>
+          <div class="service-price">$80 <small>one-time build</small></div>
+          <a href="contact.html" class="btn btn-outline">Add a chatbot</a>
+        </div>
+
+        <div class="service-card featured">
+          <div>
+            <h3>Full System Setup</h3>
+            <p>Everything G0atX offers in one build: the branded website, the advanced chatbot, working contact flows, policy pages, and payment-ready pages — all wired together from day one.</p>
+            <ul class="checklist">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Branded Website Build + Advanced Chatbot included</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Working contact form, routed privately to your inbox</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Privacy, terms, and refund policy pages drafted for you</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Payment page ready for in-person sign-off</span></li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary">Get the full system</a>
+          </div>
+          <div class="service-price">$500 <small>one-time build</small></div>
+        </div>
+
       </div>
     </div>
-    <form id="chatbotForm" class="chatbot-form">
-      <input
-        type="text"
-        id="chatbotInput"
-        placeholder="Ask about services..."
-        autocomplete="off"
-      />
-      <button type="submit">Send</button>
-    </form>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container two-col">
+      <div>
+        <div class="divider"></div>
+        <h2>How payment works</h2>
+        <p>We don't take payment online. Once a build is ready, we meet in person at your shop, walk through the site together, and you pay by check, cash, Cash App, or Venmo on the spot — after you've signed off on the work.</p>
+        <a href="payments.html" class="btn btn-outline">Read the full payment process</a>
+      </div>
+      <div>
+        <div class="divider"></div>
+        <h2>Have questions first?</h2>
+        <p>Use the chat bubble in the corner of this page — it's built to answer questions about pricing, the chatbot, and payments, typos and all. For anything else, reach us through the contact form.</p>
+        <a href="contact.html" class="btn btn-outline">Go to contact page</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <a href="index.html" class="logo">G0at<span class="accent">X</span></a>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="payments.html">Payments</a></li>
+        <li><a href="policies.html">Policies</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 G0atX. All rights reserved.</span>
+      <span>
+        <a href="policies.html#privacy">Privacy</a> ·
+        <a href="policies.html#terms">Terms</a> ·
+        <a href="policies.html#refund">Refund Policy</a>
+      </span>
+    </div>
   </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/chatbot.js"></script>
 </body>
 </html>
