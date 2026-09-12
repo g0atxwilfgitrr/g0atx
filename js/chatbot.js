@@ -167,7 +167,7 @@
       '</button>' +
       '<div class="chat-window" id="chatWindow" role="dialog" aria-label="G0atX chat assistant">' +
         '<div class="chat-head">' +
-          '<div><strong>G0atX Assistant</strong><span>Ask about pricing, builds, payments</span></div>' +
+          '<div><strong>G0atX Assistant</strong><span>Automated chat — not a human</span></div>' +
           '<button class="chat-close" id="chatClose" aria-label="Close chat">✕</button>' +
         '</div>' +
         '<div class="chat-body" id="chatBody"></div>' +
@@ -206,7 +206,7 @@
       win.classList.add("open");
       launcher.setAttribute("aria-expanded", "true");
       if (!body.childElementCount) {
-        addMsg("Hey there! I'm the G0atX assistant — ask me anything about pricing, the chatbot, payments, or how to get started. Typos are fine.", "bot");
+        addMsg("Hi — this is the G0atX Assistant, an automated chat bot (not a human). Ask me about pricing, the chatbot, payments, or how to get started. Typos are fine.", "bot");
       }
       input.focus();
     }
