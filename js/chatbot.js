@@ -38,7 +38,7 @@
     {
       id: "payments",
       keywords: ["payment", "pay", "paying", "venmo", "cashapp", "cash app", "check", "cash", "card", "online payment", "paymnet"],
-      answer: "We don't take payment online. Once you're ready to move forward, we meet in person at your shop — you review the finished site with us, sign off, and then pay by check, cash, Cash App, or Venmo on the spot. Full details are on the <a href=\"payments.html\">Payments page</a>."
+      answer: "Everything happens online — once your project is ready, you review it remotely, sign a short handoff agreement by email, and pay through a secure online checkout. No in-person meeting needed. Full details are on the <a href=\"payments.html\">Payments page</a> (online payment is being connected now, so new builds are temporarily paused)."
     },
     {
       id: "contact",
