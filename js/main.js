@@ -12,6 +12,27 @@
   applyPreferredTheme();
 
   document.addEventListener("DOMContentLoaded", function () {
+    // Wire up the "Pay Online" button to the real Stripe/Square link in
+    // config.js once it's filled in. Until then, it stays disabled so it
+    // doesn't look clickable-but-broken to a visitor.
+    document.querySelectorAll("[data-live-link='stripe']").forEach(function (el) {
+      var url = typeof STRIPE_PAYMENT_LINK !== "undefined" ? STRIPE_PAYMENT_LINK : "";
+      if (url) {
+        el.href = url;
+        el.classList.remove("btn-disabled");
+        el.removeAttribute("aria-disabled");
+        var badge = el.querySelector(".coming-soon-tag");
+        if (badge) badge.remove();
+      } else {
+        el.href = "#";
+        el.classList.add("btn-disabled");
+        el.setAttribute("aria-disabled", "true");
+        el.addEventListener("click", function (e) {
+          e.preventDefault();
+        });
+      }
+    });
+
     // Theme toggle button
     var toggle = document.querySelector(".theme-toggle");
     if (toggle) {
