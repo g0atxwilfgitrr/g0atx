@@ -366,6 +366,29 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .btn-block { width: 100%; justify-content: center; }
 
+.btn-disabled,
+.btn.btn-disabled:hover {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+  pointer-events: auto;
+}
+.coming-soon-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: var(--bg);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 2px 9px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
 /* ==========================================================================
    Hero
    ========================================================================== */
