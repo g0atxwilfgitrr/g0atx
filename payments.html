@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Payments — G0atX</title>
-<meta name="description" content="How payment works with G0atX: no online checkout, sign-off and payment happen in person." />
+<meta name="description" content="How payment works with G0atX: online payment, digital handoff documents, and domain ownership." />
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -37,95 +37,49 @@
   <section class="hero" style="padding-bottom:56px;">
     <div class="hero-shape" aria-hidden="true"></div>
     <div class="container" style="position:relative; z-index:1; max-width:760px;">
-      <span class="eyebrow-badge">Payments</span>
-      <h1>We meet in person before anyone pays.</h1>
-      <p class="lead">No online checkout, no card entry on this site. You see the finished work, agree to the terms, and pay in person — on your terms, at your shop.</p>
+      <span class="eyebrow-badge"><span class="dot"></span>Payments</span>
+      <h1>Everything happens <span class="grad-text">online</span>.</h1>
+      <p class="lead">Review your finished site, sign the handoff agreement, and pay — all remotely, no in-person meeting required.</p>
     </div>
   </section>
 
   <section class="section">
+    <div class="container">
+      <div class="notice-strip">
+        <strong>New builds are temporarily paused.</strong> We're finishing setup on secure online payment and digital sign-off. Once that's live, projects will move start to finish without needing to meet in person. Check back soon, or use the <a href="contact.html">contact form</a> to get on the list.
+      </div>
+    </div>
     <div class="container two-col">
       <div>
-        <div class="notice-strip">
-          <strong>Online payment isn't available.</strong> We don't collect card or online payments through this website. Before any payment, you'll need to review and agree to our policies, and we'll meet in person to walk through your finished site together.
-        </div>
-
         <div class="info-panel" style="margin-bottom:24px;">
           <h3>How it works</h3>
           <ol>
             <li>You submit your project through the <a href="contact.html">contact form</a>, and we scope the build.</li>
-            <li>We review our <a href="policies.html">policies</a> together — privacy, terms, and refunds — so everything is clear upfront.</li>
             <li>We build the site (and chatbot, if included) and keep you updated along the way.</li>
-            <li>Once it's ready, we come to your shop in person to show you the finished website.</li>
-            <li>If it looks good, you sign off and pay on the spot — check, cash, Cash App, or Venmo.</li>
+            <li>Once it's ready, you review the finished site remotely.</li>
+            <li>You sign a short handoff agreement online — no meeting, no printing anything.</li>
+            <li>You pay securely online, and the project (and your domain) is yours.</li>
           </ol>
         </div>
 
         <div class="info-panel">
-          <h3>Accepted payment methods (in person only)</h3>
-          <div class="payment-methods">
-            <span class="payment-pill">Check</span>
-            <span class="payment-pill">Cash</span>
-            <span class="payment-pill">Cash App</span>
-            <span class="payment-pill">Venmo</span>
-          </div>
-          <p style="margin-top:16px; margin-bottom:0;">Online payments (cards, Apple Pay, Google Pay) are not currently accepted. Everything is handled face-to-face after you've reviewed the finished site.</p>
+          <h3>Your domain, in your name</h3>
+          <p>Every project includes registering your domain directly under your own account with the registrar — not ours. That means you own it outright, you're billed directly for the yearly renewal, and there's no ongoing dependency on G0atX to keep your site online. Once a project is delivered, we don't retain access to your site, hosting, or domain.</p>
         </div>
       </div>
 
       <div class="form-card">
-        <h3 style="margin-bottom:10px;">Request to pay / reserve a slot</h3>
-        <p style="margin-bottom:24px;">This isn't an online payment — it lets us know you're ready, and we'll follow up to schedule an in-person meeting before anything is finalized.</p>
-        <form id="paymentForm" action="https://formsubmit.co/g0atxwebsite@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="Payment / build slot request from G0atX website" />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_next" value="thank-you.html" />
-          <div style="position:absolute; left:-9999px;" aria-hidden="true">
-            <label>Leave this field empty<input type="text" name="_honey" tabindex="-1" autocomplete="off" /></label>
-          </div>
+        <h3 style="margin-bottom:10px;">Pay online</h3>
+        <p style="margin-bottom:20px;">Secure checkout — your card details are handled entirely by our payment provider and never touch this site directly.</p>
+        <a href="#" data-live-link="stripe" class="btn btn-primary btn-block btn-disabled" aria-disabled="true">
+          Pay online <span class="coming-soon-tag">Coming soon</span>
+        </a>
 
-          <div class="field">
-            <label for="pname">Your name</label>
-            <input type="text" id="pname" name="name" required />
-          </div>
-          <div class="field">
-            <label for="pemail">Your email</label>
-            <input type="email" id="pemail" name="email" required />
-          </div>
-          <div class="field">
-            <label for="pservice">What service is this for?</label>
-            <select id="pservice" name="service" required>
-              <option value="" disabled selected>Select</option>
-              <option>Branded Website Build — $300</option>
-              <option>Advanced Chatbot — $80</option>
-              <option>Full System Setup — $500</option>
-              <option>Not sure yet / other</option>
-            </select>
-          </div>
-          <div class="field-row">
-            <div class="field">
-              <label for="pamount">Expected amount (USD)</label>
-              <input type="text" id="pamount" name="amount" placeholder="$500" />
-            </div>
-            <div class="field">
-              <label for="pmethod">Preferred payment method</label>
-              <select id="pmethod" name="method">
-                <option>Check</option>
-                <option>Cash</option>
-                <option>Cash App</option>
-                <option>Venmo</option>
-                <option>Other</option>
-              </select>
-            </div>
-          </div>
-          <div class="field">
-            <label for="pnotes">Additional notes (optional)</label>
-            <textarea id="pnotes" name="notes" placeholder="Best time/place to meet, questions, etc."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-block" data-label="Submit request">Submit request</button>
-          <p class="form-note">We'll reach out to schedule the in-person meeting before anything is finalized.</p>
-        </form>
+        <h3 style="margin:32px 0 10px;">Sign your handoff agreement</h3>
+        <p style="margin-bottom:12px;">There's no link to click here yet — once your project is ready, we'll personally send you a secure email from our e-signature provider to review and sign your handoff agreement. No account or app needed on your end.</p>
+        <p class="small" style="margin-bottom:0;">Note: that email comes from a third-party e-signature service, not from us directly. To produce a valid signed record, that service collects your name, email address, IP address, and a signing timestamp — separately from anything you enter on this website.</p>
+
+        <p class="form-note" style="margin-top:24px;">Not ready to pay yet? Start with the <a href="contact.html">contact form</a> instead — we'll follow up by email with next steps.</p>
       </div>
     </div>
   </section>
@@ -156,6 +110,7 @@
   </div>
 </footer>
 
+<script src="js/config.js"></script>
 <script src="js/main.js"></script>
 <script src="js/chatbot.js"></script>
 </body>
