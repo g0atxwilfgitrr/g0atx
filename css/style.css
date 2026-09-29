@@ -302,19 +302,36 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     position: fixed;
     top: 73px;
     left: 0; right: 0;
+    max-height: calc(100vh - 73px);
+    overflow-y: auto;
     background: var(--bg-raised);
     border-bottom: 1px solid var(--border);
+    box-shadow: 0 24px 40px rgba(0, 0, 0, 0.35);
     flex-direction: column;
     align-items: flex-start;
     padding: 18px 28px 26px;
-    gap: 16px;
+    gap: 4px;
     transform: translateY(-8px);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.18s ease, transform 0.18s ease;
   }
+  .nav-links a { padding: 12px 0; width: 100%; }
   .nav-links.open { opacity: 1; transform: translateY(0); pointer-events: auto; }
   .nav-toggle { display: flex; }
+  .nav-backdrop {
+    content: "";
+    position: fixed;
+    inset: 0;
+    top: 73px;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 99;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.18s ease;
+  }
+  .nav-backdrop.open { opacity: 1; pointer-events: auto; }
+  body.nav-lock { overflow: hidden; }
 }
 
 /* ==========================================================================
@@ -504,6 +521,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
    ========================================================================== */
 
 .section { padding: 84px 0; position: relative; }
+@media (max-width: 600px) {
+  .section { padding: 52px 0; }
+  .hero { padding: 56px 0 44px; }
+  .cta-band { padding: 44px 0; }
+}
 .section-alt { background: var(--bg-raised); }
 .section-head { max-width: 640px; margin-bottom: 48px; }
 .section-head p { margin: 0; }
@@ -842,7 +864,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   align-items: center;
   justify-content: center;
   box-shadow: 0 10px 26px var(--glow);
-  transition: transform 0.15s ease, background 0.2s ease;
+  transition: transform 0.15s ease, background 0.2s ease, opacity 0.15s ease;
   animation: pulseRing 2.6s ease-out infinite;
 }
 .chat-launcher:hover { transform: scale(1.06); background: var(--ember); }
@@ -902,7 +924,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 @media (max-width: 480px) {
   .chat-window { right: 16px; left: 16px; width: auto; bottom: 84px; }
-  .chat-launcher { right: 16px; bottom: 16px; }
+  .chat-launcher { right: 16px; bottom: 16px; width: 50px; height: 50px; }
+  .chat-launcher svg { width: 22px; height: 22px; }
+  .chat-launcher.chat-hidden {
+    opacity: 0;
+    transform: scale(0.7);
+    pointer-events: none;
+  }
 }
 
 /* Utility */
