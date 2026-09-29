@@ -42,21 +42,41 @@
       });
     }
 
-    // Mobile nav toggle
+    // Mobile nav toggle — with a backdrop and scroll lock so it behaves
+    // like a proper overlay instead of floating content on the page.
     var navToggle = document.querySelector(".nav-toggle");
     var navLinks = document.querySelector(".nav-links");
     if (navToggle && navLinks) {
+      var backdrop = document.createElement("div");
+      backdrop.className = "nav-backdrop";
+      document.body.appendChild(backdrop);
+
+      function closeNav() {
+        navLinks.classList.remove("open");
+        backdrop.classList.remove("open");
+        document.body.classList.remove("nav-lock");
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+      function openNav() {
+        navLinks.classList.add("open");
+        backdrop.classList.add("open");
+        document.body.classList.add("nav-lock");
+        navToggle.setAttribute("aria-expanded", "true");
+      }
+
       navToggle.addEventListener("click", function () {
-        navLinks.classList.toggle("open");
-        var expanded = navLinks.classList.contains("open");
-        navToggle.setAttribute("aria-expanded", expanded ? "true" : "false");
+        if (navLinks.classList.contains("open")) closeNav(); else openNav();
       });
+      backdrop.addEventListener("click", closeNav);
       navLinks.querySelectorAll("a").forEach(function (link) {
-        link.addEventListener("click", function () {
-          navLinks.classList.remove("open");
-        });
+        link.addEventListener("click", closeNav);
       });
     }
+
+    // On small screens, tuck the chat launcher out of the way while the
+    // visitor is focused on a form field, so it never sits on top of an
+    // input or competes with the on-screen keyboard for space.
+    // (Implemented in chatbot.js, since that's where the button is created.)
 
     // Accordion (policies page)
     document.querySelectorAll(".accordion-trigger").forEach(function (btn) {
