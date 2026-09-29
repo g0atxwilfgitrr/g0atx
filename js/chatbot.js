@@ -194,6 +194,16 @@
     var input = document.getElementById("chatInput");
     var suggestions = document.getElementById("chatSuggestions");
 
+    // On small screens, tuck the launcher out of the way while the visitor
+    // is focused on a page form field, so it never sits on top of an input
+    // or competes with the on-screen keyboard for space.
+    if (window.matchMedia("(max-width: 480px)").matches) {
+      document.querySelectorAll("input, textarea, select").forEach(function (field) {
+        field.addEventListener("focus", function () { launcher.classList.add("chat-hidden"); });
+        field.addEventListener("blur", function () { launcher.classList.remove("chat-hidden"); });
+      });
+    }
+
     function addMsg(text, who) {
       var msg = document.createElement("div");
       msg.className = "chat-msg " + who;
